@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/invite_rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar"
+        android:focusableInTouchMode="true" >
+
+        <Button
+            android:id="@+id/invite_btn_btnback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/back_btn" />
+
+        <Button
+            android:id="@+id/invite_btn_btnhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/invite_btn_add"
+            android:background="@drawable/btn_home" />
+
+        <Button
+            android:id="@+id/invite_btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/btn_add" />
+
+        <TextView
+            android:id="@+id/invite_tv_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/invite_header"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/invite_ll_top_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invite_rl_top"
+        android:background="@drawable/in_mainback_top"
+        android:orientation="horizontal"
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip"
+        android:weightSum="3" >
+
+        <Button
+            android:id="@+id/invite_btn_importfacebookfriend"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/in_btn_1"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dip" />
+
+        <Button
+            android:id="@+id/invite_btn_importcontact"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/in_btn_2"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dip" />
+
+        <Button
+            android:id="@+id/invite_btn_allinvite"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/in_btn_3_sel"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dip" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/invite_rl_main_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invite_ll_top_buttons"
+        android:background="@drawable/in_mainback_top"
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip" >
+
+        <Button
+            android:id="@+id/invite_btn_exportinvite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/in_btn_small_invite"
+            android:padding="3dip"
+           ></Button>
+        <Button
+            android:id="@+id/invite_btn_smartarrivebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/invite_btn_exportinvite"
+            android:background="@drawable/in_btn_big"
+            android:padding="3dip"></Button>
+
+        <RelativeLayout
+            android:id="@+id/invite_rl_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/invite_btn_smartarrivebtn"
+            android:background="@drawable/round_searchbox"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true" >
+
+            <ImageView
+                android:id="@+id/invite_iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="3dp"
+                android:background="@drawable/search" />
+
+            <Button
+                android:id="@+id/invite_btn_clearsearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="3dp"
+                android:background="@drawable/clear_search" />
+
+            <EditText
+                android:id="@+id/invite_et_search"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/invite_btn_clearsearch"
+                android:layout_toRightOf="@id/invite_iv_search"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="right"
+                android:hint="@string/text_search"
+                android:imeActionLabel="Search"
+                android:imeOptions="actionGo"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/invite_rl_main_search_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invite_ll_top_buttons"
+        android:background="@drawable/in_mainback_top"
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip"
+        android:visibility="invisible" >
+
+        <Button
+            android:id="@+id/invite_btn_export_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/in_btn_small"
+            android:padding="3dip"
+              android:textSize="10sp"
+              android:textColor="#4e4b45"
+             android:text="ייבא"></Button>
+
+        <RelativeLayout
+            android:id="@+id/invite_rl_search_contact"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/invite_btn_export_contact"
+            android:background="@drawable/round_searchbox" >
+
+            <ImageView
+                android:id="@+id/invite_iv_search_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="3dp"
+                android:background="@drawable/search" />
+
+            <Button
+                android:id="@+id/invite_btn_clearsearch_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="3dp"
+                android:background="@drawable/clear_search" />
+
+            <EditText
+                android:id="@+id/invite_et_search_contact"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/invite_btn_clearsearch_contact"
+                android:layout_toRightOf="@id/invite_iv_search_contact"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/text_search"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+ <RelativeLayout 
+       android:id="@+id/invite_rl_emptylist"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:layout_below="@id/invite_rl_main_search"
+       android:background="@drawable/dotted_back"
+       android:visibility="invisible"
+       android:padding="5dp"
+       >
+    <TextView
+        android:id="@+id/invite_empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:text="@string/addinvitation_emptylist"
+        android:textColor="#887253"
+        />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/invite_lv_contactList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/invite_rl_main_search"
+        android:layout_margin="15dp"
+        android:background="@drawable/dotted_back"
+        android:descendantFocusability="beforeDescendants"
+        android:divider="@drawable/dash_line"
+        android:dividerHeight="2dp"
+        android:focusableInTouchMode="true"
+        android:padding="5dp"
+        android:scrollbars="none" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/invite_rl_main_search_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/invite_rl_main_search"
+        android:background="@drawable/in_mainback_top"
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip"
+        android:visibility="invisible" >
+
+        <Button
+            android:id="@+id/invite_btn_export_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/in_btn_small"
+            android:padding="3dip"
+            android:textColor="#4e4b45"
+            android:text="ייבא"
+            android:textSize="10sp"
+           />
+
+        <RelativeLayout
+            android:id="@+id/invite_rl_search_facebook"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/invite_btn_export_facebook"
+            android:background="@drawable/round_searchbox" >
+
+            <ImageView
+                android:id="@+id/invite_iv_search_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="3dp"
+                android:background="@drawable/search" />
+
+            <Button
+                android:id="@+id/invite_btn_clearsearch_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="3dp"
+                android:background="@drawable/clear_search" />
+
+            <EditText
+                android:id="@+id/invite_et_search_facebook"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/invite_btn_clearsearch_facebook"
+                android:layout_toRightOf="@id/invite_iv_search_facebook"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/text_search"
+                android:maxLines="1"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </EditText>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

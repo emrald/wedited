@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/home_rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar" >
+
+        <ImageView
+            android:id="@+id/home_iv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/top_logo" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/home_iv_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_rl_top"
+        android:background="@drawable/home_top" />
+    <RelativeLayout
+        android:id="@+id/home_iv_top_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_rl_top"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/home_top_banner" >
+
+        <RelativeLayout
+            android:id="@+id/home_rl_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35dp" >
+
+            <TextView
+                android:id="@+id/home_tv_top_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="-"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/home_tv_top_month_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_tv_top_month"
+                android:text="@string/home_month"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/home_tv_temp_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/home_rl_month"
+            android:text=":" />
+
+        <RelativeLayout
+            android:id="@+id/home_rl_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/home_tv_temp_month" >
+
+            <TextView
+                android:id="@+id/home_tv_top_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="-"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/home_tv_top_days_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_tv_top_days"
+                android:text="@string/home_days"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/home_tv_temp_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/home_rl_days"
+            android:text=":" />
+
+        <TextView
+            android:id="@+id/home_tv_temp_timetillwedding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/home_tv_temp_days"
+            android:text="@string/home_timetillwedding"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/image_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/whitemdpi" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_rl_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/home_iv_top_banner"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:id="@+id/home_iv_list_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_round_header" />
+
+        <ListView
+            android:id="@+id/home_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/home_iv_list_header"
+            android:background="@drawable/dotted_back"
+            android:divider="@drawable/dash_line"
+            android:dividerHeight="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:scrollbars="none" >
+        </ListView>
+    </RelativeLayout>
+
+    <!-- <ImageView
+        android:id="@+id/home_iv_comingsoon"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/home_static_img"
+        android:visibility="invisible"
+        android:clickable="true" /> -->
+
+</RelativeLayout>

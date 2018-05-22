@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_id">163592167165863</string>
+    <string name="app_name">wedit</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+   <string name="text_email">אי-מייל</string>
+    <string name="text_bride_email">אי-מייל כלה</string>
+    <string name="text_groom_email">אי-מייל חתן</string>
+    <string name="text_password">סיסמא</string>
+    <string name="text_confirm_password">אשר סיסמא</string>
+    <string name="text_connect">כניסה</string>
+    <string name="text_disclaimer"><![CDATA[אני מסכים ל<u>תקנון</u>]]></string>
+    <string name="text_registration">הרשמה</string>
+	<string name="text_facebook_connect">facebook connect</string>
+	<string name="text_signup"><![CDATA[<u>הרשם!</u>]]></string>
+	<string name="text_forgot_password"><![CDATA[<u>שכחת את הסיסמה</u>]]></string>
+	<string name="text_enter_all_fields">אנא הכנס את כל השדות.</string>
+	<string name="text_category">קטגוריה:</string>
+	<string name="text_comments">הערות</string>
+	<string name="text_setting">אזור אישי</string>
+	<string name="text_name">שם</string>
+	<string name="text_send">שלח</string>
+	<string name="text_search">חפש…</string>
+	<string name="text_import">לייבא</string>
+	<string name="text_save">לחסוך</string>
+	<string name="text_startdate">תאריך ההתחלה</string>
+	<string name="text_days_to_complete">ימים כדי להשלים</string>
+	<string name="text_responsible">אחראי</string>
+	<string name="text_task_category">קטגוריה משימה</string>
+	<string name="home_timetillwedding">זמן לחתונה</string>
+	<string name="home_month">חודשים</string>
+	<string name="home_days">ימים</string>
+	<string name="home_timetillwedding">זמן לחתונה</string>
+	<string name="signup_password_not_match">סיסמא אינה תואמת.</string>
+	<string name="signup_not_valid_email">הזן אימיילים חוקיים</string>
+	<string name="signup_accept_terms">קבל את התנאים והגבלות.</string>
+	<string name="signup_password_confirmpassword_not_match">סיסמא לא תואמת</string>
+	<string name="signup_password_lenth">סיסמא חייבת להיות באורך של 6 תווים לפחות</string>
+	<string name="signup_pass">בחר סיסמא</string>
+	<string name="signup_confirm_pass">הקש סיסמא שנית</string>
+	<string name="task_header">משימות</string>
+	<string name="task_btn_all">הכל</string>
+	<string name="task_btn_tasktodo">לביצוע</string>
+	<string name="addtask_header">הוסף משימה</string>
+	<string name="addtask_edit_header">עריכת משימה</string>
+	<string name="addtask_btn">שמור</string>
+	<string name="addtask_taskname">שם משימה</string>
+	<string name="addtask_datetodo">תאריך לתחילת ביצוע</string>
+	<string name="addtask_daystillthetask">מספר ימים לביצוע</string>
+	<string name="addtask_datetofinishtask">תאריך לסיום משימה</string>
+	<string name="addtask_personincharge">אחראי ביצוע</string>
+	<string name="addtask_sendtomydiary">שלח ליומן שלי</string>
+	<string name="addtask_sendmailtoremind">שלח מייל כדי להזכיר</string>
+	<string name="addtask_sendsmsreminder">שלח SMS תזכורת</string>
+	<string name="addtask_enter_task_name">נא להזין את שם משימה.</string>
+	<string name="addtask_select_start_date">אנא בחר את תאריך התחלה.</string>
+	<string name="addtask_select_daystilltask_or_datetofinish">אנא בחר ימים עד שהמשימה או התאריך כדי לסיים את המשימה.</string>
+	<string name="addtask_select_category">אנא בחר קטגוריה.</string>
+	<string name="addtask_task_inserted">משימה נוספה בהצלחה</string>
+	<string name="addtask_daysToFinishTask">ימים לביצע:</string>
+	<string name="addtask_responsibleperson">אחראי ביצוע:</string>
+	<string name="addtask_comments">הערות:</string>
+	<string name="invite_header">מוזמנים</string>
+	<string name="invite_btn_allinvite">מוזמנים</string>
+	<string name="invite_btn_importcontact">ייבא מהמכשיר</string>
+	<string name="invite_btn_importfacebookfriend">ייבא מהפייסבוק</string>
+	<string name="invite_btn_export_invite">ייצוא</string>
+	<string name="invite_btn_export_contact">ייבא</string>
+	<string name="invite_btn_smartarrivebutton">אישורי הגעה חכמים</string>
+	<string name="addinvitation_header">הוספת מוזמנים</string>
+	<string name="addinvitation_familyname">שם משפחה</string>
+	<string name="addinvitation_name">שם פרטי</string>
+	<string name="addinvitation_numberofinvites">מספר מוזמנים</string>
+	<string name="addinvitation_confirmedarrival"> מאשרי הגעה</string>
+	<string name="addinvitation_address">כתובת</string>
+	<string name="addinvitation_vegetarian">מספר הצמחוניים</string>
+	<string name="addinvitation_vegan">מספר הטבעוניים</string>
+	<string name="addinvitation_noofdisabled">מספר הנכים</string>
+	<string name="addinvitation_noofchild">מספר הילדים</string>
+	<string name="addinvitation_noofbabies">מספר התינוקות</string>
+	<string name="addinvitation_invitationhasbeensent">הזמנה נשלחה</string>
+	<string name="addinvitation_actuallyreached">מספר שהגיעו בפועל</string>
+	<string name="addinvitation_gift">סכום המתנה</string>
+	<string name="addinvitation_btn_save">שמור</string>
+	<string name="addinvitation_phone">טלפון</string>
+	<string name="addinvitation_emptylist">תוכל לייבא מוזמנים מאנשי הקשר / הפייסבוק או לייצר מוזמן חדש בלחיצה על "+"</string>
+	<string name="editinvite_title">עריכת מוזמנים</string>
+	<string name="setting_update_personal_information">עדכון פרטים אישיים</string>
+	<string name="setting_generalexplanation">הסבר כללי</string>
+	<string name="setting_frequentlyaskedquestions">שאלות נפוצות</string>
+	<string name="setting_aboutcopyright">אודות וזכויות יוצרים</string>
+	<string name="setting_mycontactlist">רשימת אנשי הקשר שלי</string>
+	<string name="contactus_header">צור קשר</string>
+	<string name="contact_cellularphone">טלפון סלולרי</string>
+	<string name="contact_subject">נושא</string>
+	<string name="contact_freetext">טקסט חופשי</string>
+	<string name="updatepersonal_dateofwedding">תאריך של חתונה</string>
+	<string name="updatepersonal_bridename">שם כלה</string>
+	<string name="updatepersonal_groomname">שם חתן</string>
+	<string name="updatepersonal_bridephone">טלפון כלה</string>
+	<string name="updatepersonal_groomphone">טלפון חתן</string>
+	<string name="updatepersonal_brideaddress">כתובת למשלוח מתנות</string>
+	<string name="updatepersonal_groomaddress">כתובת חתן</string>
+	<string name="updatepersonal_updateinformation">לעדכן את הפרטים</string>
+	<string name="forgot_password_header">שכח את הסיסמה</string>
+	<string name="forgotpassword_pleaseenteremail">אנא הכנס את כתובת דואר אלקטרוני.</string>
+	<string name="invite_thumb_dialog_title">אנא אשר מספר מוזמנים אשר יגיעו לאירוע</string>
+	<string name="invite_thumb_dialog_update">אישור</string>
+	<string name="invite_thumb_dialog_cancel">ביטול</string>
+	<string name="invite_thumb_dialog_error_msg">מספר האורחים שהזנת גדול ממספר המוזמנים</string>
+	<string name="taskview_enddate">תאריך סיום</string>
+	<string name="loading_data">טוען נתונים</string>
+	<string name="task_deleted">משימה נמחקה</string>
+	<string name="smartarrive_diaglog_title">שליחת אישורי הגעה</string>
+	<string name="smartarrive_diaglog_byemail">ב-דוא"ל</string>
+	<string name="smartarrive_diaglog_bysms">ב-מסרון</string>
+	<string name="smartarrive_diaglog_cancel">לבטל</string>
+	<string name="smartarrive_btn_done">שלח</string>
+	<string name="smartarrive_header">בחירת מוזמנים</string>
+	<string name="settings_title1_dateofwedding">תאריך החתונה</string>
+	<string name="settings_title2_bridename">שם הכלה</string>
+	<string name="settings_title3_groomname">שם החתן</string>
+	<string name="settings_title4_bride_email">דוא”ל כלה</string>
+	<string name="settings_title5_groom_email">דוא”ל חתן</string>
+	<string name="settings_title6_bride_phone">טלפון כלה</string>
+	<string name="settings_title7_groom_phone">טלפון חתן</string>
+	<string name="settings_title8_bride_address">כתובת למשלוח מתנות</string>
+	
+	 <string name="foot_prompt">Foot</string>
+
+    <string-array name="foot">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+</resources>

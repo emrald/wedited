@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:paddingBottom="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/updatepersonal_rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar" >
+
+        <Button
+            android:id="@+id/updatepersonal_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/back_btn" />
+ 		 <Button
+            android:id="@+id/updatepersonal_btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/btn_save" />
+        
+        <TextView
+            android:id="@+id/updatepersonal_tv_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/updatepersonal_btn_back"
+            android:gravity="center"
+            android:text="@string/setting_update_personal_information"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updatepersonal_rl_top" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/settings_tv_titel1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="@string/settings_title1_dateofwedding" />
+
+            <RelativeLayout
+                android:id="@+id/updatepersonal_rl_dateofwedding"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settings_tv_titel1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:clickable="true"
+                android:padding="5dp" >
+
+                <Button
+                    android:id="@+id/updatepersonal_btn_dateofwedding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/btn_add_down" />
+
+                <TextView
+                    android:id="@+id/updatepersonal_tv_dateofwedding"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/contact_btn_subject"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:text="@string/updatepersonal_dateofwedding" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/settings_tv_titel2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/updatepersonal_rl_dateofwedding"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="@string/settings_title2_bridename" />
+
+            <EditText
+                android:id="@+id/updatepersonal_et_bride_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settings_tv_titel2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/updatepersonal_bridename"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/settings_tv_titel3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/updatepersonal_et_bride_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="@string/settings_title3_groomname" />
+
+            <EditText
+                android:id="@+id/updatepersonal_et_groom_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settings_tv_titel3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/updatepersonal_groomname"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/settings_tv_titel4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/updatepersonal_et_groom_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="@string/settings_title4_bride_email" />
+
+            <EditText
+                android:id="@+id/updatepersonal_et_bride_emai"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settings_tv_titel4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/text_bride_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/settings_tv_titel5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/updatepersonal_et_bride_emai"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="@string/settings_title5_groom_email" />
+
+            <EditText
+                android:id="@+id/updatepersonal_et_groom_emai"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settings_tv_titel5"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/text_groom_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/settings_tv_titel6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/updatepersonal_et_groom_emai"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="@string/settings_title6_bride_phone" />
+
+            <EditText
+                android:id="@+id/updatepersonal_et_bride_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settings_tv_titel6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/updatepersonal_bridephone"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/settings_tv_titel7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/updatepersonal_et_bride_phone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="@string/settings_title7_groom_phone" />
+
+            <EditText
+                android:id="@+id/updatepersonal_et_groom_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settings_tv_titel7"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/updatepersonal_groomphone"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/settings_tv_titel8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/updatepersonal_et_groom_phone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="@string/settings_title8_bride_address" />
+
+            <EditText
+                android:id="@+id/updatepersonal_et_bride_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settings_tv_titel8"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:gravity="right"
+                android:hint="@string/updatepersonal_brideaddress"
+                android:padding="5dp" />
+
+            <Button
+                android:id="@+id/updatepersonal_btn_updateinformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/updatepersonal_et_bride_address"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/yellow_btn"
+                android:text="@string/updatepersonal_updateinformation" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    
+    <RelativeLayout
+        android:id="@+id/task_rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar" >
+ <Button
+            android:id="@+id/task_btn_btnback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/back_btn" />
+
+        <Button
+            android:id="@+id/task_btn_btnhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/task_btn_add"
+            android:background="@drawable/btn_home" />
+        <Button
+            android:id="@+id/task_btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/btn_add" />
+
+        <TextView
+            android:id="@+id/task_tv_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/task_btn_add"
+            android:gravity="center"
+            android:text="@string/task_header"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+	<LinearLayout
+	    android:id="@+id/task_ll_top_buttons"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/task_rl_top"
+	    android:orientation="horizontal"
+	    android:paddingTop="5dip"
+	    android:paddingBottom="5dip"
+	    android:paddingLeft="10dip"
+	    android:paddingRight="10dip"
+	    android:weightSum="3"
+	    android:background="@drawable/in_mainback_top" 
+	>
+	    <Button
+	        android:id="@+id/task_btn_categories"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" 
+	        android:background="@drawable/task_btn_1"
+	        android:paddingTop="3dip"
+	        android:paddingBottom="3dp"
+		/>
+	    <Button
+	        android:id="@+id/task_btn_tasktodo"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" 
+	        android:background="@drawable/task_btn_2"
+	        android:paddingTop="3dip"
+	        android:paddingBottom="3dp"
+		/>
+	    <Button
+	        android:id="@+id/task_btn_all"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" 
+	        android:background="@drawable/task_btn_3_sel"
+	        android:paddingTop="3dip"
+	        android:paddingBottom="3dp"
+		/>
+	</LinearLayout>
+	<RelativeLayout
+	    android:id="@+id/task_rl_list"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginRight="20dp"
+	    android:layout_marginBottom="20dp"
+	    android:layout_below="@id/task_ll_top_buttons" 
+	>
+	    <TextView
+	        android:id="@+id/task_tv_list_header"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:background="@drawable/top_round_header"
+	        android:text="@string/task_header"
+	        android:textColor="#fff"
+	        android:gravity="center"
+	        
+		/>
+	    <ListView
+	        android:id="@+id/task_lv"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_below="@id/task_tv_list_header"
+	        android:background="@drawable/dotted_back" 
+	        
+	         android:divider="@drawable/dash_line"
+		    android:dividerHeight="2dp"
+		    android:scrollbars="none"
+		></ListView>
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp" >
+    
+    <!-- <CheckBox android:id="@+id/rowcontact_chb"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:button="@drawable/custom_chb"
+        android:layout_centerVertical="true"
+        android:drawablePadding="0dp"
+        android:visibility="invisible"
+        android:text=""/> -->
+    <CheckBox android:id="@+id/rowcontact_chb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:button="@drawable/custom_chb"
+        android:layout_centerVertical="true"
+        android:drawablePadding="0dp"
+        android:text=""/>
+    <TextView android:id="@+id/rowcontact_tv_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/rowcontact_chb"
+        android:layout_centerVertical="true"
+        android:gravity="right"
+        android:layout_marginRight="10dp" 
+        android:clickable="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/signup_rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar" >
+
+        <Button
+            android:id="@+id/signup_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/signup_tv_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/signup_btn_back"
+            android:gravity="center"
+            android:text="@string/text_registration"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/signup_rl_top" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/signup_et_bride_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_round_back"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:hint="@string/text_bride_email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:ellipsize="end"
+				android:maxLines="1" />
+
+            <EditText
+                android:id="@+id/signup_et_groom_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signup_et_bride_email"
+                android:background="@drawable/white_round_back"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:hint="@string/text_groom_email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:ellipsize="end"
+				android:maxLines="1" />
+
+            <EditText
+                android:id="@+id/signup_et_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signup_et_groom_email"
+                android:background="@drawable/white_round_back"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:hint="@string/signup_pass"
+                android:password="true"
+                android:singleLine="true" 
+                android:ellipsize="end"
+				android:maxLines="1"/>
+
+            <EditText
+                android:id="@+id/signup_et_confirm_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signup_et_password"
+                android:background="@drawable/white_round_back"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:hint="@string/signup_confirm_pass"
+                android:password="true"
+                android:singleLine="true"
+                android:ellipsize="end"
+				android:maxLines="1" />
+
+            <RelativeLayout
+                android:id="@+id/signup_rl_disclaimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signup_et_confirm_password" >
+
+                <CheckBox
+                    android:id="@+id/signup_chb_disclaimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:id="@+id/signup_tv_disclaimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/signup_chb_disclaimer"
+                    android:text="@string/text_disclaimer" 
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"/>
+            </RelativeLayout>
+            <Button 
+                android:id="@+id/signup_btn_connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signup_rl_disclaimer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/yellow_btn"
+                android:text="הרשם"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

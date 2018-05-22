@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/addnewtask_rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar" >
+
+        <Button
+            android:id="@+id/addnewtask_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/back_btn" />
+
+        <Button
+            android:id="@+id/addnewtask_btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/btn_save" />
+
+        <TextView
+            android:id="@+id/addnewtask_tv_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/addnewtask_btn_back"
+            android:gravity="center"
+            android:text="@string/addtask_header"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/addnewtask_rl_top" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true" >
+	<TextView
+                android:id="@+id/addnewtask_tv_taskname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="שם משימה:" />
+            <EditText
+                android:id="@+id/addnewtask_et_taskname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/addnewtask_tv_taskname"
+                android:background="@drawable/white_round_back"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:gravity="right"
+                android:hint="@string/addtask_taskname"
+                android:maxLength="400"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/addnewtask_tv_datetodotemp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_et_taskname"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="תאריך לתחילת ביצוע:" />
+
+            <RelativeLayout
+                android:id="@+id/addnewtask_rl_datetodo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_tv_datetodotemp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:clickable="true"
+                android:padding="5dp" >
+
+                <Button
+                    android:id="@+id/addnewtask_btn_datetodo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/btn_add_down" />
+
+                <TextView
+                    android:id="@+id/addnewtask_tv_datetodo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/addnewtask_btn_datetodo"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:text="@string/addtask_datetodo" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/addnewtask_tv_daystillthetask"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_rl_datetodo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/addtask_daysToFinishTask" />
+
+            <EditText
+                android:id="@+id/addnewtask_et_daystillthetask"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_tv_daystillthetask"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/white_round_back"
+                android:digits="0123456789"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/addtask_daystillthetask"
+                android:inputType="numberSigned"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/addnewtask_tv_datetofinishthetasktemp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_et_daystillthetask"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="תאריך לסיום משימה:" />
+
+            <RelativeLayout
+                android:id="@+id/addnewtask_rl_datetofinishthetask"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_tv_datetofinishthetasktemp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:clickable="true"
+                android:padding="5dp" >
+
+                <Button
+                    android:id="@+id/addnewtask_btn_datetofinishthetask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/btn_add_down" />
+
+                <TextView
+                    android:id="@+id/addnewtask_tv_datetofinishthetask"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/addnewtask_btn_datetofinishthetask"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:text="@string/addtask_datetofinishtask" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/addnewtask_tv_categorytemp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_rl_datetofinishthetask"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/text_category" />
+
+            <RelativeLayout
+                android:id="@+id/addnewtask_rl_category"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_tv_categorytemp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:clickable="true"
+                android:padding="5dp" >
+
+                <Button
+                    android:id="@+id/addnewtask_btn_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/btn_add_down" />
+
+                <TextView
+                    android:id="@+id/addnewtask_tv_category"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/addnewtask_btn_category"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:text="ללא קטגוריה" 
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/addnewtask_tv_personincharge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_rl_category"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/addtask_responsibleperson" />
+
+            <EditText
+                android:id="@+id/addnewtask_et_personincharge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_tv_personincharge"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/white_round_back"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/addtask_personincharge"
+                android:maxLength="400"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/addnewtask_tv_comments"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_et_personincharge"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="@string/addtask_comments" />
+
+            <EditText
+                android:id="@+id/addnewtask_et_comments"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/addnewtask_tv_comments"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/white_round_back"
+                android:gravity="top|right"
+                android:hint="הערות"
+                android:maxLength="400"
+                android:padding="5dp"
+                android:scrollbars="vertical" />
+
+            <!-- <TextView
+                android:id="@+id/addnewtask_tv_sendtomydiarytemp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_et_comments"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="שלח ליומן שלי:" /> -->
+
+            <RelativeLayout
+                android:id="@+id/addnewtask_rl_sendtomydiary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addnewtask_et_comments"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:padding="5dp" >
+
+                <ToggleButton
+                    android:id="@+id/addnewtask_btn_sendtomydiary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/toggle_custom"
+                    android:textOff=""
+                    android:textOn="" />
+
+                <TextView
+                    android:id="@+id/addnewtask_tv_sendtomydiary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/addnewtask_btn_sendtomydiary"
+                    android:gravity="right"
+                    android:text="@string/addtask_sendtomydiary" />
+            </RelativeLayout>
+
+            <!-- <TextView
+                android:id="@+id/addnewtask_tv_sendmailtoremindtemp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_rl_sendtomydiary"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="שלח מייל כדי להזכיר:" /> -->
+
+            <RelativeLayout
+                android:id="@+id/addnewtask_rl_sendmailtoremind"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addnewtask_rl_sendtomydiary"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:padding="5dp" >
+
+                <ToggleButton
+                    android:id="@+id/addnewtask_btn_sendmailtoremind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/toggle_custom"
+                    android:textOff=""
+                    android:textOn="" />
+
+                <TextView
+                    android:id="@+id/addnewtask_tv_sendmailtoremind"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/addnewtask_btn_sendmailtoremind"
+                    android:gravity="right"
+                    android:text="@string/addtask_sendmailtoremind" />
+            </RelativeLayout>
+
+            <!-- <TextView
+                android:id="@+id/addnewtask_tv_sendsmsremaindertemp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_rl_sendmailtoremind"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="שלח SMS תזכורת:" /> -->
+
+            <!-- <RelativeLayout
+                android:id="@+id/addnewtask_rl_sendsmsremainder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addnewtask_rl_sendmailtoremind"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:padding="5dp" >
+
+                <ToggleButton
+                    android:id="@+id/addnewtask_btn_sendsmsremainder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/toggle_custom"
+                    android:textOff=""
+                    android:textOn="" />
+
+                <TextView
+                    android:id="@+id/addnewtask_tv_sendsmsremainder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/addnewtask_btn_sendsmsremainder"
+                    android:gravity="right"
+                    android:text="@string/addtask_sendsmsreminder" />
+            </RelativeLayout>
+ -->
+            <Button
+                android:id="@+id/addnewtask_btn_addtask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addnewtask_rl_sendmailtoremind"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/yellow_btn"
+                android:text="@string/addtask_btn" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

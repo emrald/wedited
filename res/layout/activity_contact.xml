@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/contact_rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar" >
+
+        <Button
+            android:id="@+id/contact_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/back_btn" />
+
+        
+
+        <TextView
+            android:id="@+id/contact_tv_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/contact_btn_back"
+            android:gravity="center"
+            android:text="@string/contactus_header"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_rl_top" 
+	>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:descendantFocusability="beforeDescendants" android:focusableInTouchMode="true"
+		>
+            <EditText
+                android:id="@+id/contact_et_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:gravity="right"
+                android:hint="@string/text_name"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+				android:maxLines="1" />
+            <EditText
+                android:id="@+id/contact_et_cellularphone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_et_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:gravity="right"
+                android:hint="@string/contact_cellularphone"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:inputType="phone" 
+                android:digits="0123456789"
+                android:ellipsize="end"
+				android:maxLines="1"/>
+            <EditText
+                android:id="@+id/contact_et_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_et_cellularphone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:gravity="right"
+                android:hint="@string/text_email"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:inputType="textEmailAddress" 
+                android:ellipsize="end"
+				android:maxLines="1"/>
+            <RelativeLayout
+                android:id="@+id/contact_rl_subject"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_et_email"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:padding="5dp"
+                android:clickable="true" >
+
+                <Button
+                    android:id="@+id/contact_btn_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/btn_add_down" />
+
+                <TextView
+                    android:id="@+id/contact_tv_subject"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/contact_btn_subject"
+                    android:gravity="right"
+                    android:clickable="true"
+                    android:text="@string/contact_subject" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/contact_et_freetext"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/contact_rl_subject"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_round_back"
+                android:hint="@string/contact_freetext"
+                android:padding="5dp"
+                android:gravity="right|top" />
+            <Button
+                android:id="@+id/contact_btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contact_et_freetext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/yellow_btn"
+                android:text="@string/text_send" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/smartarrive_rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar"
+        android:focusableInTouchMode="true" >
+
+        <Button
+            android:id="@+id/smartarrive_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/smartarrive_tv_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/smartarrive_btn_back"
+            android:gravity="center"
+            android:text="@string/smartarrive_header"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/smartarrive_rl_filter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/smartarrive_rl_top"
+        android:background="@drawable/in_mainback_top" >
+
+        <Button
+            android:id="@+id/smartarrive_btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/in_btn_small"
+            android:textSize="10sp"
+            android:text="שלח"
+            android:layout_centerVertical="true" 
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginLeft="5dp"/>
+        
+        <RelativeLayout
+            android:id="@+id/smartarrive_rl_search_"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/smartarrive_btn_done"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/round_searchbox" >
+
+            <ImageView
+                android:id="@+id/smartarrive_iv_search_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="3dp"
+                android:background="@drawable/search" />
+
+            <Button
+                android:id="@+id/smartarrive_btn_clearsearch_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="3dp"
+                android:background="@drawable/clear_search" />
+
+            <EditText
+                android:id="@+id/smartarrive_et_search_facebook"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/smartarrive_btn_clearsearch_filter"
+                android:layout_toRightOf="@id/smartarrive_iv_search_filter"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:hint="@string/text_search"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/smartarrive_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/smartarrive_rl_filter"
+        android:layout_margin="15dp"
+        android:background="@drawable/dotted_back"
+        android:descendantFocusability="beforeDescendants"
+        android:divider="@drawable/dash_line"
+        android:dividerHeight="2dp"
+        android:focusableInTouchMode="true"
+        android:padding="5dp"
+        android:scrollbars="none" >
+    </ListView>
+
+</RelativeLayout>
